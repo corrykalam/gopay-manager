@@ -195,7 +195,7 @@ else:
         if wallet_log == False:
             sys.exit(0)
         else:
-            sendWallet(wallet_log, token, pin, unique)      
+            print(sendWallet(wallet_log, token, pin, unique))     
     elif menu_log == "3":
         no = 0
         username = ""
@@ -250,7 +250,7 @@ else:
         if wallet_log == False:
             sys.exit(0)
         else:
-            sendWalletOtherAmount(wallet_log, token, pin, unique, amount_log) 
+            print(sendWalletOtherAmount(wallet_log, token, pin, unique, amount_log)) 
     elif menu_log == "5":
         no = 0
         username = ""
