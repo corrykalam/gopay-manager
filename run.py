@@ -8,9 +8,11 @@ uniqueid = "ac03e5d1e7c3b%s"%(random.randint(000,999));
 base_url = "https://api.gojekapi.com"
 headers = {
     "Content-Type": "application/json",
-    "X-AppVersion": "2.28.2",
+    "X-AppVersion": "3.34.2",
     "X-Uniqueid": "%s"%(uniqueid),
-    "X-Location": "-6.180495,106.824992"
+    "X-Location": "-6.180495,106.824992",
+    "X-PhoneModel": "Apple, iPhone 8",
+    "X-DeviceOS": "iOS, 12.3.1"
 }
 def backupConfig():
     with open('config.json','w') as fp:
