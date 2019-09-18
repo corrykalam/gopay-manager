@@ -9,5 +9,9 @@
 - Add accounts
 - Delete accounts
 
+## Instalation
+- `git clone https://github.com/corrykalam/gopay-manager`
+- `pip3 install requests`
+
 ## RUN
 - `python3 run.py`
