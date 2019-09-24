@@ -62,7 +62,7 @@ def checkWalletCode(phone,token, uniqueid):
     else:
         headers["Authorization"] = "Bearer %s"%(token)
         headers["X-Uniqueid"] = uniqueid
-        req = requests.get(base_url+"/wallet/qr-code?phone_number=%2B62"+phone, headers=headers).text
+        req = requests.get(base_url+"/wallet/qr-code?phone_number=%2B"+phone, headers=headers).text
         jsonq = json.loads(req)
         if jsonq["success"] == True:
             return jsonq["data"]["qr_id"]
