@@ -48,11 +48,11 @@ def login(logintoken, otp, nameconfig, pin):
         return False
 
 def checkWalletCode(phone,token, uniqueid):
-    if phone[0] == "6":
+    if phone[0] == "0":
         headers["Authorization"] = "Bearer %s"%(token)
         headers["X-Uniqueid"] = uniqueid
         print(headers)
-        req = requests.get(base_url+"/wallet/qr-code?phone_number=%2B%s"%(phone), headers=headers).text
+        req = requests.get(base_url+"/wallet/qr-code?phone_number=%2B62%s"%(phone[1:]), headers=headers).text
         jsonq = json.loads(req)
         if jsonq["success"] == True:
             return jsonq["data"]["qr_id"]
@@ -62,7 +62,7 @@ def checkWalletCode(phone,token, uniqueid):
     else:
         headers["Authorization"] = "Bearer %s"%(token)
         headers["X-Uniqueid"] = uniqueid
-        req = requests.get(base_url+"/wallet/qr-code?phone_number=%2B62"+phone[1:], headers=headers).text
+        req = requests.get(base_url+"/wallet/qr-code?phone_number=%2B62"+phone, headers=headers).text
         jsonq = json.loads(req)
         if jsonq["success"] == True:
             return jsonq["data"]["qr_id"]
