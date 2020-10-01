@@ -3,6 +3,7 @@ import requests, json, random, sys, os, time, os.path
 Gopay Accounts Manager
 Author: @corrykalam
 Date: 06/09/2019
+Bantu acc PR gan :(
 """
 uniqueid = "ac03e5d1e7c3b%s"%(random.randint(000,999));
 base_url = "https://api.gojekapi.com"
